@@ -45,7 +45,7 @@ def get_game_reviews(game_id: str, sort_id: int, token: str = '') -> tuple:
     return result, continuation_token
 
 
-def take_game_information(game_id: str) -> list:
+def take_game_information(game_id: str,n_hits: int=2) -> list:
     """
     Retrieve information about a specific game from the Google Play Store.
 
@@ -58,7 +58,7 @@ def take_game_information(game_id: str) -> list:
         game_id,
         lang="en",  # defaults to 'en'
         country="us",  # defaults to 'us'
-        n_hits=2  # defaults to 30 (= Google's maximum)
+        n_hits=n_hits  # defaults to 30 (= Google's maximum)
     )
 
     return game
