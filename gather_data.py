@@ -1,7 +1,7 @@
 # pip install google-play-scraper
 import pandas as pd
 from tqdm import tqdm
-from src.gather_data import take_game_information, get_game_reviews
+from src.get_data import take_game_information, get_game_reviews
 
 tqdm.pandas()
 
